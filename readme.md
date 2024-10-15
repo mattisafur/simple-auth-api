@@ -34,7 +34,7 @@ The program uses a postgresql database to store user authentication information 
 
 ### user_data
 
-| Column       | Type    | Constraints              |
-| ------------ | ------- | ------------------------ |
-| `username` ` | CITEX   | Primary Key, Foreign Key |
-| `data`       | VARCHAR | Not null                 |
+| Column     | Type    | Constraints              |
+| ---------- | ------- | ------------------------ |
+| `username` | CITEX   | Primary Key, Foreign Key |
+| `data`     | VARCHAR | Not null                 |

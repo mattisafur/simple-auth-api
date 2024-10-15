@@ -11,7 +11,7 @@ def get_required_env_variable(name: str) -> str:
     return variable
 
 
-DATABASE_HOST = get_required_env_variable("DATABASE_URL")
+DATABASE_HOST = get_required_env_variable("DATABASE_HOST")
 DATABASE_PORT = get_required_env_variable("DATABASE_PORT")
 DATABASE_USERNAME = get_required_env_variable("DATABASE_USERNAME")
 DATABASE_PASSWORD = get_required_env_variable("DATABASE_PASSWORD")
