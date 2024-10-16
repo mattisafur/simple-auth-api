@@ -1,3 +1,4 @@
+from datetime import datetime
 from secrets import token_urlsafe
 from bcrypt import checkpw, gensalt, hashpw
 from flask import Flask, request
@@ -146,6 +147,9 @@ class Data(Resource):
                 return {"message": "Token not found"}, 404
 
             token_obj = get_token(session, token)
+            
+            if token_obj.expires_at < datetime.now():
+                return {"message": "Token expired"}, 401
 
             data = get_user_data(session, token_obj.username)
 
