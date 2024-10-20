@@ -14,4 +14,4 @@ COPY app.py data_utils.py database.py models.py ./
 
 CMD [ "python", "app.py" ]
 
-EXPOSE 5000
+EXPOSE 80

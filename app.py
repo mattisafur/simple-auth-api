@@ -147,7 +147,7 @@ class Data(Resource):
                 return {"message": "Token not found"}, 404
 
             token_obj = get_token(session, token)
-            
+
             if token_obj.expires_at < datetime.now():
                 return {"message": "Token expired"}, 401
 
@@ -203,4 +203,4 @@ if __name__ == "__main__":
     api.add_resource(Delete, "/delete")
     api.add_resource(Data, "/data")
 
-    app.run("0.0.0.0", debug=True)
+    app.run("0.0.0.0", port=80, debug=True)
